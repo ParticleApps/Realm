@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ParticleRealm_Example' do
+  pod 'ParticleRealm', :path => '../'
+
+  target 'ParticleRealm_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
