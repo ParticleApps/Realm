@@ -7,13 +7,29 @@
 //
 
 #import "PCAppDelegate.h"
+#import <ParticleRealm/PCRealm.h>
+
+#import "PCTestObject.h"
 
 @implementation PCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self test];
     return YES;
+}
+
+- (void)test {
+    NSArray *array = [[PCTestObject allObjects] arrayValue];
+    NSLog(@"First Array: %li", (unsigned long)array.count);
+    
+    PCTestObject *object = (PCTestObject *)[[PCRealmManager sharedInstance] addOrUpdateObject:@{@"id" : @1, @"title": @"firstObject"} class:[PCTestObject class]];
+    
+    NSLog(@"Object Title: %@", object.testThing);
+    
+    array = [[PCTestObject allObjects] arrayValue];
+    NSLog(@"Second Array: %li", (unsigned long)array.count);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

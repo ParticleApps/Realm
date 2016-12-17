@@ -21,6 +21,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		8107B3A2CC433B953043C6F1 /* Pods_ParticleRealm_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FCB1E9160F2E1A4AB33D53 /* Pods_ParticleRealm_Example.framework */; };
+		8481B8F51E05E97400CE8A08 /* PCTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481B8F41E05E97400CE8A08 /* PCTestObject.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9B4A6D53A401CC8A16CBB9D6 /* Pods_ParticleRealm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B9C4D8EFB03166ABE7F79B /* Pods_ParticleRealm_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -36,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16C12C03C1304E3352344674 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		16C12C03C1304E3352344674 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		49766DD492CE3EC6711B3DEF /* Pods-ParticleRealm_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleRealm_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleRealm_Example/Pods-ParticleRealm_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4A304B26C59FFE827A0E53DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4A304B26C59FFE827A0E53DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		52B9C4D8EFB03166ABE7F79B /* Pods_ParticleRealm_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParticleRealm_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* ParticleRealm_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleRealm_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,10 +62,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		60FCB1E9160F2E1A4AB33D53 /* Pods_ParticleRealm_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParticleRealm_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C9E08CA09D55E6CB34FC2A8 /* Pods-ParticleRealm_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleRealm_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleRealm_Tests/Pods-ParticleRealm_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8481B8F31E05E97400CE8A08 /* PCTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTestObject.h; sourceTree = "<group>"; };
+		8481B8F41E05E97400CE8A08 /* PCTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTestObject.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9F81D365851F8F85583F781D /* Pods-ParticleRealm_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleRealm_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleRealm_Tests/Pods-ParticleRealm_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1FCFF89E613D771CBE7156C /* Pods-ParticleRealm_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleRealm_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleRealm_Example/Pods-ParticleRealm_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EF49F2B9CBEA4981FB9347E9 /* ParticleRealm.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ParticleRealm.podspec; path = ../ParticleRealm.podspec; sourceTree = "<group>"; };
+		EF49F2B9CBEA4981FB9347E9 /* ParticleRealm.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ParticleRealm.podspec; path = ../ParticleRealm.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				6003F5A6195388D20070C39A /* PCViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				8481B8F31E05E97400CE8A08 /* PCTestObject.h */,
+				8481B8F41E05E97400CE8A08 /* PCTestObject.m */,
 			);
 			name = "Example for ParticleRealm";
 			path = ParticleRealm;
@@ -393,6 +398,7 @@
 				6003F59E195388D20070C39A /* PCAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PCViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				8481B8F51E05E97400CE8A08 /* PCTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
