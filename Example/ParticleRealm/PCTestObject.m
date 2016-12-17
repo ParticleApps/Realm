@@ -27,18 +27,22 @@
     return self;
 }
 
++ (NSString *)primaryKey {
+    return @"uniqueStringId";
+}
+
 + (NSDictionary *)JSONInboundMappingDictionary {
-    return @{
-             @"id" : @"uniqueId",
-             @"title" : @"testThing"
-             };
+    NSMutableDictionary *dictionary = [[PCRLMObject JSONInboundMappingDictionary] mutableCopy];
+    dictionary[@"id"] = @"uniqueStringId";
+    dictionary[@"title"] = @"testThing";
+    return dictionary;
 }
 
 + (NSDictionary *)JSONOutboundMappingDictionary {
-    return @{
-             @"uniqueId": @"id",
-             @"title": @"tesThing"
-             };
+    NSMutableDictionary *dictionary = [[PCRLMObject JSONOutboundMappingDictionary] mutableCopy];
+    dictionary[@"uniqueStringId"] = @"id";
+    dictionary[@"testThing"] = @"title";
+    return dictionary;
 }
 
 @end

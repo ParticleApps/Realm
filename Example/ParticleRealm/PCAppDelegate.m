@@ -23,9 +23,9 @@
 - (void)test {
     NSArray *array = [[PCTestObject allObjects] arrayValue];
     NSLog(@"First Array: %li", (unsigned long)array.count);
+    NSLog(@"Key: %@", [PCTestObject primaryKey]);
     
-    PCTestObject *object = (PCTestObject *)[[PCRealmManager sharedInstance] addOrUpdateObject:@{@"id" : @1, @"title": @"firstObject"} class:[PCTestObject class]];
-    
+    PCTestObject *object = (PCTestObject *)[[PCRealmManager sharedInstance] addOrUpdateObject:@{@"id" : @"3", @"title": @"firstObject"} class:[PCTestObject class]];
     NSLog(@"Object Title: %@", object.testThing);
     
     array = [[PCTestObject allObjects] arrayValue];
