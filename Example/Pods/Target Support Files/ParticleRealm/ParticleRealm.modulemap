@@ -1,6 +1,0 @@
-framework module ParticleRealm {
-  umbrella header "ParticleRealm-umbrella.h"
-
-  export *
-  module * { export * }
-}

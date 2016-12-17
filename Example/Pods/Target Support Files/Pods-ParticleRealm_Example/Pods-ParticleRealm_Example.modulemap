@@ -1,6 +1,0 @@
-framework module Pods_ParticleRealm_Example {
-  umbrella header "Pods-ParticleRealm_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
