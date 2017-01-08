@@ -34,12 +34,15 @@
     return self;
 }
 
-- (NSArray <PCRLMObject *> *)addOrUpdateAndDeleteObjectsOfType:(Class)pcclass fromArray:(NSArray *)array removeStaleObjects:(BOOL)removeStaleObjects {
+- (NSArray <PCRLMObject *> *)addOrUpdateObjectsOfType:(Class)pcclass fromArray:(NSArray *)array removeStaleObjects:(BOOL)removeStaleObjects {
     //Declare Initial Variables
+    BOOL isInWriteTransaction = self.realm.inWriteTransaction;
     NSMutableArray<RLMObject *> *values  = [NSMutableArray arrayWithCapacity:array.count];
     NSMutableArray<NSNumber *> *arrayIds = [NSMutableArray arrayWithCapacity:array.count];
     
-    [self.realm beginWriteTransaction];
+    if (!isInWriteTransaction) {
+        [self.realm beginWriteTransaction];
+    }
     
     //Add Or Update Exisitng Objects
     for (NSDictionary *value in array) {
@@ -53,15 +56,20 @@
         [self.realm deleteObjects:[deadValues arrayValue]];
     }
     
-    [self.realm commitWriteTransaction];
+    if (!isInWriteTransaction) {
+        [self.realm commitWriteTransaction];
+    }
     
     return values;
 }
 
 - (PCRLMObject *)addOrUpdateObject:(NSDictionary *)dictionary class:(Class)pcclass {
-    [self.realm beginWriteTransaction];
+    BOOL isInWriteTransaction = self.realm.inWriteTransaction;
+    
+    if (!isInWriteTransaction) [self.realm beginWriteTransaction];
     PCRLMObject *object = [pcclass createOrUpdateInRealm:self.realm withJSONDictionary:dictionary];
-    [self.realm commitWriteTransaction];
+    if (!isInWriteTransaction) [self.realm commitWriteTransaction];
+    
     return object;
 }
 

@@ -15,7 +15,7 @@
 
 + (instancetype)sharedInstance;
 
-- (NSArray <PCRLMObject *> *)addOrUpdateAndDeleteObjectsOfType:(Class)pcclass fromArray:(NSArray *)array removeStaleObjects:(BOOL)removeStaleObjects;
+- (NSArray <PCRLMObject *> *)addOrUpdateObjectsOfType:(Class)pcclass fromArray:(NSArray *)array removeStaleObjects:(BOOL)removeStaleObjects;
 
 - (PCRLMObject *)addOrUpdateObject:(NSDictionary *)dictionary class:(Class)pcclass;
 
