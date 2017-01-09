@@ -18,6 +18,7 @@
 #import "RLMResults+Array.h"
 
 //Classes
+#import "PCRealmObservationManager.h"
 #import "PCRealmManager.h"
 #import "PCRLMObject.h"
 
