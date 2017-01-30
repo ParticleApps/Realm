@@ -25,4 +25,8 @@
 
 - (void)removeObserver:(id<PCRealmObserver>)observer;
 
+- (void)registerForUpdates;
+
+- (void)unregisterForUpdates;
+
 @end

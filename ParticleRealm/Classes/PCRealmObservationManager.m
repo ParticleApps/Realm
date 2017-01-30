@@ -25,18 +25,39 @@
     return _sharedClient;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.observers = [NSHashTable weakObjectsHashTable];
+        self.realm = [RLMRealm defaultRealm];
+        
+        [self registerForUpdates];
+    }
+    return self;
+}
+
 - (void)reloadObserver:(id<PCRealmObserver>)observer {
     
 }
 
 - (void)addObserver:(id<PCRealmObserver>)observer {
     [self.observers addObject:observer];
+    [self reloadObserver:observer];
 }
 
 - (void)removeObserver:(id<PCRealmObserver>)observer {
     if ([self.observers containsObject:observer]) {
         [self.observers removeObject:observer];
     }
+}
+
+- (void)registerForUpdates {
+    
+}
+
+
+- (void)unregisterForUpdates {
+    
 }
 
 @end
