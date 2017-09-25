@@ -1,9 +1,9 @@
 # ParticleRealm
 
-[![CI Status](http://img.shields.io/travis/Rocco Del Priore/ParticleRealm.svg?style=flat)](https://travis-ci.org/Rocco Del Priore/ParticleRealm)
-[![Version](https://img.shields.io/cocoapods/v/ParticleRealm.svg?style=flat)](http://cocoapods.org/pods/ParticleRealm)
-[![License](https://img.shields.io/cocoapods/l/ParticleRealm.svg?style=flat)](http://cocoapods.org/pods/ParticleRealm)
-[![Platform](https://img.shields.io/cocoapods/p/ParticleRealm.svg?style=flat)](http://cocoapods.org/pods/ParticleRealm)
+[![Version](https://img.shields.io/github/release/ParticleApps/Realm.svg)](https://github.com/ParticleApps/Realm/releases)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+Adds observers, better JSON handling, & convienence extensions.
 
 ## Example
 
@@ -11,19 +11,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-## Installation
-
-ParticleRealm is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
 ```ruby
-pod "ParticleRealm"
+pod "Realm"
+```
+Requires the realm framework. http://cocoapods.org/pods/realm
+
+## Adding to Your Project
+
+Simply add the following to your Podfile if you're using CocoaPods:
+
+``` ruby
+pod 'ParticleRealm', :git => "https://github.com/ParticleApps/Realm.git"
 ```
 
-## Author
+or Cartfile if you're using Carthage:
 
-Rocco Del Priore, roccodelpriore@me.com
-
-## License
-
-ParticleRealm is available under the MIT license. See the LICENSE file for more info.
+```
+github "ParticleApps/Realm"
+```
